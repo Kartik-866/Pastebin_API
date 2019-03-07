@@ -1,5 +1,5 @@
 import requests
-import getpass
+from getpass import getpasss
 
 def pasteAsGuest():
     paste_url = 'https://pastebin.com/api/api_post.php'
@@ -30,7 +30,7 @@ paste_name = input('Paste Name: ')
 if not paste_name:
     paste_name = 'Untitled'
 user_name = input('User Name: ')
-user_password = getpass.getpass()
+user_password = getpass()
 
 login_url = 'https://pastebin.com/api/api_login.php'
 create_user_key = {'api_dev_key': api_dev_key,
